@@ -5,14 +5,14 @@ function getRandomHexColor() {
 
 const createBoxes = (amount) => { 
   let fragment = new DocumentFragment();
-  const arrayDiv = [];// массив для хранения полученых дивов
- for (let i = 0; i < amount; i++) { // интератор будет выполнятся пока меньше значения параметра
-   const widthHeightSize = 30 + i * 10 + 'px'; // на каждой интераци прибавляем 10пикселей
-   const divNew = document.createElement("div"); // создаем див
-     divNew.style.width = widthHeightSize; // ширина
-     divNew.style.height = widthHeightSize;// высота
-     divNew.style.backgroundColor = getRandomHexColor();// рандомный фон
-   arrayDiv.push(divNew); // пушим наш готовый див в массив
+  const arrayDiv = [];
+ for (let i = 0; i < amount; i++) { 
+   const widthHeightSize = 30 + i * 10 + 'px'; 
+   const divNew = document.createElement("div"); 
+     divNew.style.width = widthHeightSize; 
+     divNew.style.height = widthHeightSize;
+     divNew.style.backgroundColor = getRandomHexColor();
+   arrayDiv.push(divNew); 
    fragment.appendChild(divNew);
  }
 boxes.appendChild(fragment);
