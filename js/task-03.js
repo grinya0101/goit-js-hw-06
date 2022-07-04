@@ -20,6 +20,6 @@ const ulEL = document.querySelector(".gallery");
 const imgEL = images.map(({url, alt}) => {
     console.log(alt);
     return `<li><img class = item alt='${alt}' src='${url}' ></li>`;
-})
+}).join(" ");
 
 ulEL.insertAdjacentHTML("beforeend", ` ${imgEL}`);
