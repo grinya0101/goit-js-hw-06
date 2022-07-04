@@ -10,13 +10,6 @@ function onFormSubmit (event) {
 
     const formData = new FormData(event.currentTarget)
 
-    formData.forEach((email, password) =>{
-        console.log('email', email);
-        console.log('password', password);
-        return formData.reset
-
-    });
-
     const {
         elements: { email, password }
       } = event.currentTarget;
@@ -25,7 +18,8 @@ function onFormSubmit (event) {
     if (email.value === "" || password.value === "") {
          alert('Заполни все поля формы');
       }
-
+       
+      console.log(formData)
       event.currentTarget.reset()
 
    

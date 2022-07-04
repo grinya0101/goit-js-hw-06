@@ -5,6 +5,11 @@ const spanEL = document.querySelector('#name-output');
 inputEl.addEventListener('input', onIventinput)
 
 function onIventinput (event) {
+    if(event.currentTarget.value === ""){
+    spanEL.textContent = "Anonimus";
     
-    spanEL.textContent = event.currentTarget.value;
+    } else {
+        spanEL.textContent = event.currentTarget.value;
+    }
+    
 }

@@ -14,13 +14,12 @@ const images = [
 ];
 
 
-const ulEL = document.querySelector('.gallery');
 
-images.forEach(element => {
-  ulEL.insertAdjacentHTML('afterbegin', '<li><img class = item ></li>');
-  const imgEL = document.querySelector('.item');
-  imgEL.alt = element.alt;
-  imgEL.src = element.url;
-  
-});
 
+const ulEL = document.querySelector(".gallery");
+const imgEL = images.map(({url, alt}) => {
+    console.log(alt);
+    return `<li><img class = item alt='${alt}' src='${url}' ></li>`;
+})
+
+ulEL.insertAdjacentHTML("beforeend", ` ${imgEL}`);

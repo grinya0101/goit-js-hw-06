@@ -8,27 +8,25 @@ const ingredients = [
 ];
 
 
-// const liEl = document.createElement('li')
-// liEl.classList.add(item)
-// console.log(liEl)
+
 
 
 const textEL = document.querySelector('#ingredients');
-// const liEl = document.createElement('li');
-// liEl.className = 'item';
-// liEl.textContent = 'Potatoes'
 
-ingredients.forEach(element => {
+
+const addli = ingredients.map(element => {
 const liEl = document.createElement('li');
 liEl.className = 'item';
 liEl.textContent = element;
-textEL.prepend(liEl);
-console.log(element);
+return liEl;
+
+
 });
 
 
+textEL.append(...addli);
 
-// const wq= liEl.innerHTML = `${ingredients}`;
+
 
 
 
