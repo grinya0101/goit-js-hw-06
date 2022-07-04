@@ -15,7 +15,7 @@ function getRandomHexColor() {
 }
 
 
-function getRandomHexColorw(event) {
+function getRandomHexColor(event) {
   bodyEl.style.backgroundColor = getRandomHexColor()
   spanEL.textContent = bodyEl.style.backgroundColor
 }
