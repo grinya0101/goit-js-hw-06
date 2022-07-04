@@ -6,7 +6,7 @@ console.log(spanEL)
 
 
 
-btnEL.addEventListener('click', getRandomHexColorw);
+btnEL.addEventListener('click', getStyleText);
 
 
 function getRandomHexColor() {
@@ -15,7 +15,7 @@ function getRandomHexColor() {
 }
 
 
-function getRandomHexColor(event) {
+function getStyleText(event) {
   bodyEl.style.backgroundColor = getRandomHexColor()
   spanEL.textContent = bodyEl.style.backgroundColor
 }
